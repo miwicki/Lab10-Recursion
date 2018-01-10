@@ -1,5 +1,41 @@
 ﻿using System;
 
+//I have resigned myself to doing it the Ariel way because I couldn't get my way (below) to work
+
+namespace TowersOfHanoi
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Towers of Hanoi! Enter the number of disks you'd like to use:");
+            int n = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Minimum number of moves\nUsing Recursion (Hanoi(n)): " + Hanoi(n));
+            Console.WriteLine("Minimum number of moves using iteration: " + Hanoi2(n));
+            Console.ReadLine();
+        }
+
+        public static int Hanoi(int n)
+        {
+            if (n == 1) return 1;
+            return (2 * (Hanoi(n - 1)) + 1);
+        }
+
+        public static int Hanoi2(int n)
+        {
+            int count = 1;
+            for (int i = 0; i < n; i++)
+            {
+                count = count * 2;
+            }
+            return count - 1;
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /*
 namespace TowersOfHanoi
 {
     class TowerOfHanoi
@@ -60,3 +96,4 @@ namespace TowersOfHanoi
         }
     }
 }
+*/

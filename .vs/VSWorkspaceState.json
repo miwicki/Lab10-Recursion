@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TowersOfHanoi",
+    "\\TowersOfHanoi\\TowersOfHanoi"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\readme.md",
   "PreviewInSolutionExplorer": false
 }
